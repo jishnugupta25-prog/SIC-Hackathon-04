@@ -1,0 +1,158 @@
+Build a full-stack “Crime Reporter & Safety Assistant” web application using Next.js (latest App Router), Tailwind CSS, HTML, JavaScript, and Gemini AI integration. The project should run on Replit. Implement the following features:
+
+1. Authentication System
+
+Email + password–based login and registration.
+
+On registration, send an OTP to the user's email for verification.
+
+Do not allow login until OTP verification is complete.
+
+Store encrypted passwords (bcrypt).
+
+Use JWT or NextAuth for secure session management.
+
+2. User Dashboard
+
+After logging in, the user should see a dashboard with:
+
+Add Emergency Contacts (Name + Phone number; allow multiple contacts)
+
+Live Location Fetching using browser geolocation API (latitude, longitude).
+
+Display last known location.
+
+Show map preview using Google Maps or OpenStreetMap.
+
+3. SOS Button (High Priority Feature)
+
+Implement a large red SOS button in dashboard:
+
+On click, instantly fetch the user’s live location.
+
+Send SMS notifications to all emergency contacts saying:
+
+“ALERT! 
+𝑈
+𝑠
+𝑒
+𝑟
+𝑁
+𝑎
+𝑚
+𝑒
+UserName pressed SOS. They may be in danger. Location: 
+𝐺
+𝑜
+𝑜
+𝑔
+𝑙
+𝑒
+𝑀
+𝑎
+𝑝
+𝑠
+𝑙
+𝑖
+𝑛
+𝑘
+GoogleMapslink.”
+
+Use Twilio API or any SMS API for sending messages.
+
+Store SOS event in the database with timestamp + location.
+
+4. Safe Locations Finder
+
+Show nearby safe places such as:
+
+Police stations
+
+Hospitals
+
+Public shelters
+
+Fire stations
+
+Use Google Places API to fetch real-time nearby safe locations.
+
+Display results on a map + list view with distance and directions.
+
+5. Crime Heatmap & Crime Count
+
+Based on the user’s current location (lat, long), display:
+
+Crime severity in the area
+
+Total number of crimes reported nearby
+
+Visualization using heatmap or color-coded zone
+
+You may simulate crime data or integrate any public crime dataset API.
+
+6. Gemini AI Integration
+
+Integrate Google Gemini AI API to provide:
+
+Safety suggestions based on current location
+
+Risk assessment of area
+
+Personalized safety tips and real-time advice
+Example prompt to Gemini:
+
+“Analyze this location (lat, long) and provide risk score, safety suggestions, and precautions.”
+
+Display AI insights on the dashboard.
+
+7. Backend Requirements
+
+Use a backend API route system in Next.js.
+
+Technologies: Node.js, Express-style Next routes OR Next Server Actions.
+
+Database: Firebase / MongoDB / Supabase / Replit DB (any supported).
+
+Store:
+
+Users
+
+Verified emails
+
+Emergency contacts
+
+SOS logs
+
+Crime data (static or dynamic)
+
+8. UI/UX Requirements
+
+Fully responsive modern UI
+
+Tailwind CSS for all styling
+
+Clean sidebar navigation
+
+Minimal dashboard-style layout
+
+SOS button should be fixed, large, and highlighted
+
+9. Final Output
+
+Provide:
+
+Full folder structure
+
+Complete code for all pages
+
+API route implementations
+
+Database schema
+
+Env variable setup instructions
+
+SMS and email OTP integration setup
+
+Deployment instructions for Replit
+
+Ensure everything is production-ready, cleanly structured, and easy to run.
